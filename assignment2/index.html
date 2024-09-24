@@ -28,15 +28,15 @@
 
     <!-- Main Content Section -->
     <main class="container">
-        <div class="timer" id="timer">25:00</div>
+      <div class="timer" id="timer">25:00</div>
       <!-- Media Player Section -->
       <div class="media-player">
         <audio id="custom-audio-player" controls loop>
-            <!-- A loop property was added, as repeatedly needing to replay the music would become an inconvenience if the user is trying to focus whilst studying -->
+          <!-- A loop property was added, as repeatedly needing to replay the music would become an inconvenience if the user is trying to focus whilst studying -->
           <source src="erokia_ambient-wave-56-msfxp7-78.mp3" type="audio/mp3" />
         </audio>
         <div class="custom-controls">
-          <button id="play-pause-btn" onclick="togglePlayPause(); startTimer();">
+          <button id="play-pause-btn" onclick="togglePlayPause();">
             <img
               id="play-pause-img"
               src="https://img.icons8.com/ios-glyphs/30/play--v1.png"
@@ -55,6 +55,10 @@
               height="24"
             />
           </button>
+          <button onclick="startTimer();" id="start-timer-btn">
+            Start Timer
+          </button>
+          <button onclick="stopTimer();" id="stop-timer-btn">Stop Timer</button>
           <!-- add the missing buttons or functionality here -->
           <div class="progress-bar">
             <span id="progress-bar-fill"></span>

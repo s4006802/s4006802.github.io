@@ -7,27 +7,27 @@ const playPauseImg = document.querySelector("#play-pause-img");
 const progressBar = document.querySelector("#progress-bar-fill");
 audio.removeAttribute("controls");
 
-var volClicks = 0;
+// This code intends to count the number of times the volume button is clicked, so it can cycle through the functions of low volume, mute, and full volume.
+let volClicks = 0;
 function vol() {
   volClicks++;
   console.log("click");
-  if ((volClicks = 1)) {
+  if (volClicks === 1) {
     audio.volume = 0.3;
     volImg.src = "https://img.icons8.com/ios-glyphs/30/low-volume.png";
     console.log("audio low");
     console.log(volClicks);
-    s;
-  } else if ((volClicks = 2)) {
+  } else if (volClicks === 2) {
     audio.muted = true;
     volImg.src = "https://img.icons8.com/ios-glyphs/30/no-audio--v1.png";
     console.log("audio muted");
     console.log(volClicks);
-  } else if ((volClicks = 3)) {
+  } else if (volClicks === 3) {
     audio.muted = false;
-    muteImg.src = "https://img.icons8.com/ios-glyphs/30/high-volume--v2.png";
+    volImg.src = "https://img.icons8.com/ios-glyphs/30/high-volume--v2.png";
     console.log("audio unmuted");
     console.log(volClicks);
-    var volClicks = 0;
+    volClicks = 0;
   }
 }
 
@@ -66,16 +66,36 @@ let time = startingMinutes * 60;
 
 const timer = document.querySelector("#timer");
 
-var timerClick = 0;
+const startTimerBtn = document.querySelector("#start-timer-btn");
+const stopTimerBtn = document.querySelector("#stop-timer-btn");
+
+stopTimerBtn.disabled = true;
+
+// these functions
 function startTimer() {
-  if ((timerClick = "0")) {
-    setInterval(updateTimer, 1000);
-    timerClick = 1;
-  } else {
-  clearInterval()
-timerClick = 0
+  setInterval(updateTimer, 1000);
+  startTimerBtn.disabled = true;
+  stopTimerBtn.disabled = false;
+  startTimerBtn.style.backgroundColor = "red";
+  console.log("start timer");
 }
+function stopTimer() {
+  clearInterval();
+  startTimerBtn.disabled = false;
+  stopTimerBtn.disabled = true;
+  console.log("stop timer");
 }
+
+// var timerClick = 0;
+// function startTimer() {
+//   if ((timerClick = "0")) {
+//     setInterval(updateTimer, 1000);
+//     timerClick = 1;
+//   } else {
+//     clearInterval();
+//     timerClick = 0;
+//   }
+// }
 
 function updateTimer() {
   const minutes = Math.floor(time / 60);
@@ -83,6 +103,6 @@ function updateTimer() {
   seconds = seconds < 10 ? "0" + seconds : seconds;
   timer.innerHTML = `${minutes}: ${seconds}`;
   time--;
-  time = time < 0 ? 0 : time; 
+  time = time < 0 ? 0 : time;
 }
 // Add other functionalities here
