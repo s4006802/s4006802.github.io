@@ -61,29 +61,50 @@ function updateProgressBar() {
   progressBar.style.width = value + "%";
 }
 
-const startingMinutes = 25;
-let time = startingMinutes * 60;
+var startingMinutes = 25;
+var time = startingMinutes * 60;
+
+const inputTime = document.querySelector("#input-time").value;
+const submitBtn = document.querySelector("#submit");
+
+submitBtn.addEventListener("click", submitPressed);
+function submitPressed() {
+  time = inputTime * 60;
+  console.log(inputTime);
+  console.log("submit");
+}
 
 const timer = document.querySelector("#timer");
 
 const startTimerBtn = document.querySelector("#start-timer-btn");
 const stopTimerBtn = document.querySelector("#stop-timer-btn");
+const resetTimerBtn = document.querySelector("#reset-timer-btn");
 
 stopTimerBtn.disabled = true;
 
 // these functions
+var timerID;
 function startTimer() {
-  setInterval(updateTimer, 1000);
+  timerID = setInterval(updateTimer, 1000);
   startTimerBtn.disabled = true;
   stopTimerBtn.disabled = false;
   startTimerBtn.style.backgroundColor = "red";
   console.log("start timer");
+  console.log(inputTime);
 }
 function stopTimer() {
-  clearInterval();
+  clearInterval(timerID);
   startTimerBtn.disabled = false;
   stopTimerBtn.disabled = true;
   console.log("stop timer");
+}
+function resetTimer() {
+  clearInterval(timerID);
+  time = startingMinutes * 60
+  startTimerBtn.disabled = false;
+  stopTimerBtn.disabled = true;
+  updateTimer();
+  console.log("reset timer");
 }
 
 // var timerClick = 0;

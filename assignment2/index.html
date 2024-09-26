@@ -59,6 +59,21 @@
             Start Timer
           </button>
           <button onclick="stopTimer();" id="stop-timer-btn">Stop Timer</button>
+          <button onclick="resetTimer();" id="reset-timer-btn">
+            Reset Timer
+          </button>
+          <form>
+            <label for="input-time">Quantity (between 1 and 5):</label>
+            <input
+              type="number"
+              id="input-time"
+              name="input-time"
+              min="1"
+              max="5"
+            />
+            <input type="submit" id="submit"/>
+          </form>
+          <!-- <button id="submit">Submit </button> -->
           <!-- add the missing buttons or functionality here -->
           <div class="progress-bar">
             <span id="progress-bar-fill"></span>
