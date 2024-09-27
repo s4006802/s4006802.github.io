@@ -15,20 +15,31 @@
       <h1>Music Study Timer</h1>
     </header>
 
-    <!-- Navigation Section -->
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Videos</a></li>
-        <li><a href="#">Music</a></li>
-        <li><a href="#">Playlists</a></li>
-        <!-- Add or remove navigation items as needed -->
-      </ul>
-    </nav>
+    <!-- The navigation segment was removed to simplify the layout. As the website is intended as a simple study timer, other webpages are unecessary. -->
 
     <!-- Main Content Section -->
     <main class="container">
-      <div class="timer" id="timer">25:00</div>
+      
+      <div id="circles"><div id="outer-circle"><div id="inner-circle"><div id="timer">25:00</div></div></div></div>
+
+      <div id="timer-btns">
+        <button onclick="startTimer();" id="start-timer-btn">
+          Start Timer
+        </button>
+        <button onclick="stopTimer();" id="stop-timer-btn">Pause Timer</button>
+        <button onclick="resetTimer();" id="reset-timer-btn">
+          Reset Timer
+        </button>
+        <div> <label for="input-time">Timer Duration:</label>
+        <input
+          type="number"
+          id="input-time"
+          name="input-time"
+          min="1"
+          max="60"
+        />
+        <input type="submit" id="submit" /></div>
+      </div>
       <!-- Media Player Section -->
       <div class="media-player">
         <audio id="custom-audio-player" controls loop>
@@ -55,38 +66,13 @@
               height="24"
             />
           </button>
-          <button onclick="startTimer();" id="start-timer-btn">
-            Start Timer
-          </button>
-          <button onclick="stopTimer();" id="stop-timer-btn">Stop Timer</button>
-          <button onclick="resetTimer();" id="reset-timer-btn">
-            Reset Timer
-          </button>
-          <form>
-            <label for="input-time">Quantity (between 1 and 5):</label>
-            <input
-              type="number"
-              id="input-time"
-              name="input-time"
-              min="1"
-              max="5"
-            />
-            <input type="submit" id="submit"/>
-          </form>
-          <!-- <button id="submit">Submit </button> -->
-          <!-- add the missing buttons or functionality here -->
+
           <div class="progress-bar">
             <span id="progress-bar-fill"></span>
           </div>
         </div>
       </div>
-
-      <!-- Additional Content Section -->
-      <section>
-        <h2>Additional Content</h2>
-        <p>This is where you can showcase any other relevant content.</p>
-        <!-- Add more content as needed -->
-      </section>
+      <div id="timer-prog"> <span id="timer-prog-fill"></span></div>
     </main>
 
     <!-- Footer Section -->
