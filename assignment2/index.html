@@ -19,9 +19,9 @@
 
     <!-- Main Content Section -->
     <main class="container">
-      
-      <div id="circles"><div id="outer-circle"><div id="inner-circle"><div id="timer">25:00</div></div></div></div>
-
+      <div id="timer-back">
+      <div><div id="timer">25:00</div></div>
+      <div id="timer-prog"> <span id="timer-prog-fill"></span></div>
       <div id="timer-btns">
         <button onclick="startTimer();" id="start-timer-btn">
           Start Timer
@@ -40,6 +40,7 @@
         />
         <input type="submit" id="submit" /></div>
       </div>
+    </div>
       <!-- Media Player Section -->
       <div class="media-player">
         <audio id="custom-audio-player" controls loop>
@@ -72,7 +73,7 @@
           </div>
         </div>
       </div>
-      <div id="timer-prog"> <span id="timer-prog-fill"></span></div>
+    
     </main>
 
     <!-- Footer Section -->

@@ -123,6 +123,8 @@
     font-size: 10rem;
     text-align: center;
     margin: auto;
+    position: relative;
+    z-index: 10;
   }
 
   #timer-btns {
@@ -159,10 +161,11 @@ margin: auto;
 
   #timer-prog {
     width: 100%;
-    height: 10px;
+    height: 300px;
     background-color: #9a3939;
-    margin-top: 10px;
     overflow: hidden;
+    position: relative;
+    bottom: 200px;
   }
 
   #timer-prog span {
@@ -170,5 +173,6 @@ margin: auto;
     height: 100%;
     background-color: aquamarine;
     width: 0;
-    transition: width 2s ease;
+    transition: width 0.3s ease;
+    z-index: 1;
   }

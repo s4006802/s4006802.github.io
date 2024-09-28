@@ -4,6 +4,7 @@ const volImg = document.querySelector("#vol-img");
 const playPauseImg = document.querySelector("#play-pause-img");
 const progressBar = document.querySelector("#progress-bar-fill");
 audio.removeAttribute("controls");
+const background = document.querySelector("#timer-back");
 
 // Volume Button
 
@@ -51,12 +52,12 @@ function updateProgressBar() {
 }
 
 // Timer Code
-
-let startingMinutes = 25;
-let time = startingMinutes * 60;
-
 let inputTime = document.querySelector("#input-time").value;
 const submitBtn = document.querySelector("#submit");
+
+// The default time is set to 25 minutes, which is the standard length of a Pomodoro study block.
+inputTime = 25;
+let time = inputTime * 60;
 
 submitBtn.addEventListener("click", submitPressed);
 function submitPressed() {
@@ -104,8 +105,10 @@ function updateTimer() {
     console.log("Done!");
     updateTimerProg(); 
     clearInterval(timerID);
+    background.style.backgroundColor = "#9a3939"; 
   } else {
     updateTimerProg(); 
+    background.style.backgroundColor = "#ddd"; 
     const minutes = Math.floor(time / 60);
     let seconds = time % 60;
     seconds = seconds < 10 ? "0" + seconds : seconds;
