@@ -1,7 +1,7 @@
 :root {
-  --primary-bg-color: #f4f4f4;
+  --primary-bg-color: #ffffff;
   --text-color: #333;
-  --main-bg-color: #333;
+  --main-bg-color: #87a490;
   --main-text-color: #fff;
   --main-btn-bg-color: #7a908e;
 }
@@ -31,6 +31,8 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+/* The website uses a minimalistic design to minimise distractions and clutter in order to encourage the focus needed for study. */
+/* The sans-serif font, flat harmonious colours and simple layout attempt to aid in this. */
 
 .container {
   max-width: 1100px;
@@ -82,6 +84,7 @@ header {
 .custom-controls button:hover {
   background-color: rgb(144, 163, 163);
 }
+/* A hover was implemented to increase user feedback from the buttons, and to indicate to the user that the buttons are interactable */
 
 .progress-bar {
   width: 100%;
@@ -99,6 +102,8 @@ header {
   transition: width 0.3s ease;
 }
 
+/* Footer styling */
+
 footer {
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
@@ -107,6 +112,8 @@ footer {
   padding: 10px 0;
   width: 100%;
 }
+
+/* Timer styling */
 
 #timer {
   align-items: center;
@@ -118,7 +125,7 @@ footer {
 }
 
 #timer-back {
-  min-width: 1000px;
+  min-width: 700px;
 }
 
 #timer-controls {
@@ -129,12 +136,14 @@ footer {
   justify-content: space-between;
 }
 
-#timer-controls button, input[type="submit"] {
+#timer-controls button,
+input[type="submit"] {
   background-color: var(--main-btn-bg-color);
   color: var(--main-text-color);
   width: 100px;
   height: 60px;
   margin: 10px;
+  padding: auto;
   transition-duration: 0.2s;
 }
 
@@ -152,6 +161,10 @@ input[type="submit"]:hover {
   background-color: rgb(144, 163, 163);
 }
 
+#timer-controls button:disabled {
+  background-color: #c5dcd8;
+}
+/* Buttons are greyed out when disabled, to indicate to the user that they cannot be used */
 
 #timer-dur {
   background-color: var(--main-btn-bg-color);
@@ -184,7 +197,6 @@ input {
   transition: width 0.3s ease;
   z-index: 2;
 }
-
-/* #timer-back {
-  background-color: #ddd;
-} */
+/* When the timer begins, the progress bar turns red, which in Western cultures signify alertness and action. */
+/* This aims to encourage focus, whilst the cooler green at its end aims to indicate relief from the study block. */
+/* The progress bar is overlayed behind the timer to create association, and not to create confusion with the other progress bar */
