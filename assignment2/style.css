@@ -117,6 +117,10 @@ footer {
   color: var(--main-text-color);
 }
 
+#timer-back {
+  min-width: 1000px;
+}
+
 #timer-controls {
   background-color: #d0e1df;
   padding: 0 5rem 0 5rem;
@@ -125,11 +129,9 @@ footer {
   justify-content: space-between;
 }
 
-#timer-controls button,
-input[type="submit"] {
+#timer-controls button, input[type="submit"] {
   background-color: var(--main-btn-bg-color);
   color: var(--main-text-color);
-  cursor: pointer;
   width: 100px;
   height: 60px;
   margin: 10px;
@@ -138,6 +140,11 @@ input[type="submit"] {
 
 #timer-controls label {
   color: var(--main-text-color);
+  margin: 10px;
+}
+
+#submit {
+  height: 45px;
 }
 
 #timer-controls button:hover,
@@ -145,18 +152,19 @@ input[type="submit"]:hover {
   background-color: rgb(144, 163, 163);
 }
 
-#submit {
-  height: 45px;
-  transition-duration: 0.2s;
-}
 
 #timer-dur {
-  background-color: rgb(81, 159, 113);
+  background-color: var(--main-btn-bg-color);
   height: 60px;
+  width: 350px;
   margin: 10px;
   padding: 10px;
   display: flex;
   align-items: center;
+}
+
+input {
+  margin: 10px;
 }
 
 #timer-prog {

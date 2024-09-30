@@ -105,10 +105,10 @@ function updateTimer() {
     console.log("Done!");
     updateTimerProg();
     clearInterval(timerID);
-    background.style.backgroundColor = "#9a3939";
+    // background.style.backgroundColor = "#9a3939";
   } else {
     updateTimerProg();
-    background.style.backgroundColor = "#ddd";
+    // background.style.backgroundColor = "#ddd";
     const minutes = Math.floor(time / 60);
     let seconds = time % 60;
     seconds = seconds < 10 ? "0" + seconds : seconds;
