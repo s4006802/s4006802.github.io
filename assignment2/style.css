@@ -1,178 +1,182 @@
 :root {
-    --primary-bg-color: #f4f4f4;
-    --text-color: #333;
-    --main-bg-color: #333;
-    --main-text-color: #fff;
-    --main-btn-bg-color: #938989;
-  }
-  
-  body,
-  h1,
-  p,
-  ul {
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: "Arial", sans-serif;
-    background-color: var(--primary-bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  /* Add additional styles as needed */
-  
-  /* Create a container for the main content */
-  .container {
-    max-width: 1000px;
-    width: 100%;
-    padding: 10px;
-  }
-  
-  /* Header styling */
-  header {
-    background-color: var(--main-bg-color);
-    color: var(--main-text-color);
-    padding: 10px 0;
-    text-align: center;
-    width: 100%;
-  }
-  
-  /* Navigation styling */
-  nav {
-    margin-top: 20px;
-    text-align: center;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-  }
-  
-  nav ul li {
-    margin-right: 20px;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: var(--text-color);
-  }
-  
-  /* Media player styling */
-  .media-player {
-    width: 100%;
-    margin: 0 auto;
-  }
-  
-  .media-player video {
-    max-width: 100%;
-  }
-  
-  .custom-controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 10px;
-    width: 100%;
-  }
-  
-  .custom-controls button {
-    background-color: var(--main-btn-bg-color);
-    color: var(--main-text-color);
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .progress-bar {
-    width: 100%;
-    height: 10px;
-    background-color: #ddd;
-    margin-top: 10px;
-    overflow: hidden;
-  }
-  
-  .progress-bar span {
-    display: block;
-    height: 100%;
-    background-color: var(--main-bg-color);
-    width: 0;
-    transition: width 0.3s ease;
-  }
-  
-  /* Footer styling */
-  footer {
-    background-color: var(--main-bg-color);
-    color: var(--main-text-color);
-    text-align: center;
-    padding: 10px 0;
-    width: 100%;
-  }
+  --primary-bg-color: #f4f4f4;
+  --text-color: #333;
+  --main-bg-color: #333;
+  --main-text-color: #fff;
+  --main-btn-bg-color: #7a908e;
+}
 
-  #timer {
-    font-size: 10rem;
-    text-align: center;
-    margin: auto;
-    position: relative;
-    z-index: 10;
-  }
+.raleway {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
 
-  #timer-btns {
-    padding: 0 5rem 0 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+body,
+h1,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
 
-  /* #outer-circle {
-border-radius: 50%;
-background-color: #7f3030;
-height: 600px;
-width: 600px;
-display: flex;
-align-items: center;
-margin: auto;
-  }
-  
-  #inner-circle {
-    border-radius: 50%;
-    background-color: #f4f4f4;
-    height: 450px;
-width: 450px;
-display: flex;
-align-items: center;
-margin: auto;
-  }
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: var(--primary-bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
 
-  #circles {
-    display: flex;
-    align-items: center;
-  } */
+.container {
+  max-width: 1100px;
+  width: 100%;
+  padding: 10px;
+}
 
-  #timer-prog {
-    width: 100%;
-    height: 300px;
-    background-color: #9a3939;
-    overflow: hidden;
-    position: relative;
-    bottom: 200px;
-  }
+/* Header styling */
+header {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  padding: 10px 0;
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+}
 
-  #timer-prog span {
-    display: block;
-    height: 100%;
-    background-color: aquamarine;
-    width: 0;
-    transition: width 0.3s ease;
-    z-index: 1;
-  }
+/* Media player styling */
+.media-player {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.media-player video {
+  max-width: 100%;
+}
+
+.custom-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.custom-controls button {
+  background-color: var(--main-btn-bg-color);
+  color: var(--main-text-color);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  transition-duration: 0.2s;
+}
+
+.custom-controls button:hover {
+  background-color: rgb(144, 163, 163);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #ddd;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.progress-bar span {
+  display: block;
+  height: 100%;
+  background-color: var(--main-bg-color);
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+footer {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  align-items: center;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+}
+
+#timer {
+  align-items: center;
+  font-size: 10rem;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  color: var(--main-text-color);
+}
+
+#timer-controls {
+  background-color: #d0e1df;
+  padding: 0 5rem 0 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#timer-controls button,
+input[type="submit"] {
+  background-color: var(--main-btn-bg-color);
+  color: var(--main-text-color);
+  cursor: pointer;
+  width: 100px;
+  height: 60px;
+  margin: 10px;
+  transition-duration: 0.2s;
+}
+
+#timer-controls label {
+  color: var(--main-text-color);
+}
+
+#timer-controls button:hover,
+input[type="submit"]:hover {
+  background-color: rgb(144, 163, 163);
+}
+
+#submit {
+  height: 45px;
+  transition-duration: 0.2s;
+}
+
+#timer-dur {
+  background-color: rgb(81, 159, 113);
+  height: 60px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+#timer-prog {
+  width: 100%;
+  height: 300px;
+  background-color: rgb(85, 160, 135);
+  overflow: hidden;
+  position: relative;
+}
+
+#timer-prog span {
+  display: block;
+  position: absolute;
+  height: 100%;
+  background-color: #dd6a6a;
+  width: 0;
+  transition: width 0.3s ease;
+  z-index: 2;
+}
+
+/* #timer-back {
+  background-color: #ddd;
+} */

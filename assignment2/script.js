@@ -103,12 +103,12 @@ function updateTimer() {
   if (time === 0) {
     timer.innerHTML = `0:00`;
     console.log("Done!");
-    updateTimerProg(); 
+    updateTimerProg();
     clearInterval(timerID);
-    background.style.backgroundColor = "#9a3939"; 
+    background.style.backgroundColor = "#9a3939";
   } else {
-    updateTimerProg(); 
-    background.style.backgroundColor = "#ddd"; 
+    updateTimerProg();
+    background.style.backgroundColor = "#ddd";
     const minutes = Math.floor(time / 60);
     let seconds = time % 60;
     seconds = seconds < 10 ? "0" + seconds : seconds;
@@ -120,7 +120,7 @@ function updateTimer() {
 // Timer code was created based on code by FlorinPop, sourced from https://www.youtube.com/watch?v=x7WJEmxNlEs&ab_channel=FlorinPop
 // Code was changed to integreate more user interactivity, with start, stop and reset buttons, as well as user input timer duration.
 
-const timerProg = document.querySelector("#timer-prog-fill")
+const timerProg = document.querySelector("#timer-prog-fill");
 
 function updateTimerProg() {
   const timevalue = (time / (inputTime * 60)) * 100;
