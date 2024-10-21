@@ -1,0 +1,135 @@
+nav {
+  padding: 100px 0px 0px 100px;
+}
+
+
+.outer {
+  padding: 10px;
+  display: flex;
+  margin: 100px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-color: aqua;
+}
+
+.inner {
+  user-select: none;
+}
+
+.painting {
+  margin: 2px;
+  padding: 5px;
+  position: relative;
+  background-color: rgb(194, 176, 176);
+}
+
+
+.painting button {
+  max-height: 300px;
+  min-height: 100px;
+  min-width: 100px;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.painting img {
+  max-height: 300px;
+  min-height: 100px;
+  min-width: 100px;
+  cursor: pointer;
+}
+
+/* #duck {
+  min-height: 100px;
+  min-width: none;
+} */
+
+.art-tag {
+  background-color: brown;
+  width: 100%;
+  align-items: center;
+  display: none;
+  justify-content: center;
+  font-size: 1rem;
+  position: absolute;
+  /* bottom: 35px; */
+  /* animation: btn-scale 0.1s forwards; */
+}
+
+/* .inner {
+  display: none;
+} */
+
+#salmon-tag.show, #astro-tag.show, #king-tag.show, #duck-tag.show, #sushi-tag.show, #bull-tag.show{
+  display: block;
+}
+
+/* #astrobottle-info.show {
+  display: block;
+} */
+
+#astro-button {
+  position: absolute;
+  top: 2%;
+  transition: transform 0.1s;
+}
+
+button:hover {
+  transform: scale(1.05)
+}
+
+#salmon-egg, #king, #astrobottle, #bull, #tuna-sushi, #duck {
+  background-color: blueviolet; 
+}
+
+.window {
+  display: flex;
+  margin:  5vw 5vw 5vw 5vw;
+  min-width: 700px;
+  min-height: 500px;
+  max-height: 50vw;
+  background-color: aliceblue;
+  color: black;
+  position: fixed;
+  z-index: 1;
+}
+
+.full-img {
+  max-width: 500px;
+  min-height: 500px;
+}
+
+.desc {
+  padding: 1rem;
+}
+
+/* #astro-button.scale {
+  animation: btn-scale 0.1s forwards;
+}
+
+#astro-button.scale-out {
+    animation: btn-scale-out 0.1s forwards;
+  } */
+/* A simple hover and transiton cannot be used on the button, as the information tag obstructs the button hover, causing the hover to be cancelled whenever the user hovers over the tag. To combat this, I used javascript to detect the hover over the whole div instead. */
+
+/* @keyframes btn-scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes btn-scale-out {
+  0% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+} */
+
+/* https://stackoverflow.com/questions/294250/how-do-i-retrieve-an-html-elements-actual-width-and-height */
