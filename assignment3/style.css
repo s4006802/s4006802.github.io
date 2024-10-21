@@ -2,7 +2,9 @@ nav {
   padding: 100px 0px 0px 100px;
 }
 
+
 .outer {
+  padding: 10px;
   display: flex;
   margin: 100px;
   flex-wrap: wrap;
@@ -17,6 +19,7 @@ nav {
 }
 
 .painting {
+  margin: 2px;
   padding: 5px;
   position: relative;
   background-color: rgb(194, 176, 176);
@@ -38,10 +41,10 @@ nav {
   cursor: pointer;
 }
 
-#duck {
+/* #duck {
   min-height: 100px;
   min-width: none;
-}
+} */
 
 .art-tag {
   background-color: brown;
@@ -59,32 +62,7 @@ nav {
   display: none;
 } */
 
-#salmon-tag.show {
-  display: block;
-}
-
-
-#astrobottle-info {
-  user-select: none;
-}
-
-#astro-tag {
-    display: none;
-}
-
-#king-tag.show {
-  display: block;
-}
-
-#duck-tag.show {
-  display: block;
-}
-
-#astro-tag.show {
-    display: block;
-}
-
-#sushi-tag.show {
+#salmon-tag.show, #astro-tag.show, #king-tag.show, #duck-tag.show, #sushi-tag.show, #bull-tag.show{
   display: block;
 }
 
@@ -98,17 +76,33 @@ nav {
   transition: transform 0.1s;
 }
 
-#astro-button:hover {
-    transform: scale(1.05)
-}
-
 button:hover {
   transform: scale(1.05)
 }
 
-#salmon-egg {
-  background-color: blueviolet;
-  
+#salmon-egg, #king, #astrobottle, #bull, #tuna-sushi, #duck {
+  background-color: blueviolet; 
+}
+
+.window {
+  display: flex;
+  margin:  5vw 5vw 5vw 5vw;
+  min-width: 700px;
+  min-height: 500px;
+  max-height: 50vw;
+  background-color: aliceblue;
+  color: black;
+  position: fixed;
+  z-index: 1;
+}
+
+.full-img {
+  max-width: 500px;
+  min-height: 500px;
+}
+
+.desc {
+  padding: 1rem;
 }
 
 /* #astro-button.scale {
@@ -119,12 +113,6 @@ button:hover {
     animation: btn-scale-out 0.1s forwards;
   } */
 /* A simple hover and transiton cannot be used on the button, as the information tag obstructs the button hover, causing the hover to be cancelled whenever the user hovers over the tag. To combat this, I used javascript to detect the hover over the whole div instead. */
-
-#astro-button.show {
-  display: block;
-}
-
-
 
 /* @keyframes btn-scale {
   0% {
