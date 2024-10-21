@@ -9,11 +9,26 @@ nav {
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  background-color: aqua;
+}
+
+.inner {
+  user-select: none;
 }
 
 .painting {
   padding: 5px;
   position: relative;
+  background-color: rgb(194, 176, 176);
+}
+
+
+.painting button {
+  max-height: 300px;
+  min-height: 100px;
+  min-width: 100px;
+  cursor: pointer;
+  transition: transform 0.1s;
 }
 
 .painting img {
@@ -32,17 +47,21 @@ nav {
   background-color: brown;
   width: 100%;
   align-items: center;
-  display: flex;
+  display: none;
   justify-content: center;
   font-size: 1rem;
   position: absolute;
-  bottom: 35px;
+  /* bottom: 35px; */
   /* animation: btn-scale 0.1s forwards; */
 }
 
 /* .inner {
   display: none;
 } */
+
+#salmon-tag.show {
+  display: block;
+}
 
 
 #astrobottle-info {
@@ -53,13 +72,25 @@ nav {
     display: none;
 }
 
+#king-tag.show {
+  display: block;
+}
+
+#duck-tag.show {
+  display: block;
+}
+
 #astro-tag.show {
     display: block;
 }
 
-#astrobottle-info.show {
+#sushi-tag.show {
   display: block;
 }
+
+/* #astrobottle-info.show {
+  display: block;
+} */
 
 #astro-button {
   position: absolute;
@@ -69,6 +100,15 @@ nav {
 
 #astro-button:hover {
     transform: scale(1.05)
+}
+
+button:hover {
+  transform: scale(1.05)
+}
+
+#salmon-egg {
+  background-color: blueviolet;
+  
 }
 
 /* #astro-button.scale {
