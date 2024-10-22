@@ -101,6 +101,7 @@ button:hover {
   background-color: aliceblue;
   color: black;
   position: fixed;
+  cursor: default;
   z-index: 2;
 }
 
@@ -113,6 +114,7 @@ button:hover {
   height: 100vh;
   position: fixed;
   z-index: 1;
+  cursor: pointer;
 }
 
 #astro-pop-container.show {
@@ -125,8 +127,10 @@ button:hover {
 }
 
 .full-img {
-  max-width: 600px;
-  min-height: 600px;
+  /* max-width: 50vw; */
+  max-height: 80vh;
+  min-height: 100px;
+  object-fit: cover;
 }
 
 .desc {
