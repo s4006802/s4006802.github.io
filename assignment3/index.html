@@ -9,12 +9,15 @@
     <title>Be Portfolio</title>
   </head>
   <body>
-    <div class="window">
-      <img src="astrobottle.png" class="full-img" />
-      <div class="desc">
-        <h1>Astrobottle - Procreate</h1>
-        <p>This image was created</p>
+    <div id="astro-pop-container">
+      <div class="window">
+        <img src="astrobottle.png" class="full-img" />
+        <div class="desc">
+          <h1>Astrobottle - Procreate</h1>
+          <p>This image was created</p>
+        </div>
       </div>
+      <div id="astro-pop-back"></div>
     </div>
     <nav>
       <h1>Dylan Be - Digital Art</h1>
@@ -32,27 +35,25 @@
         <div id="astrobottle">
           <!-- Extra div allows the hover to be active even if the cursor is hovering over the info text, and without including the padding -->
           <img src="astrobottle.png" />
-          <div class="inner" id="astrobottle-info">
-            <button id="astro-button">
-              <div class="art-tag" id="astro-tag">
-                <p>'Astrobottle' - Procreate</p>
-              </div>
-              <img src="astrobottle.png" />
-            </button>
-          </div>
+          <!-- <div class="inner" id="astrobottle-info"> -->
+          <button id="astro-button">
+            <div class="art-tag" id="astro-tag">
+              <p>'Astrobottle' - Procreate</p>
+            </div>
+            <img src="astrobottle.png" />
+          </button>
+          <!-- </div> -->
         </div>
       </div>
 
       <div class="painting">
         <div id="salmon-egg">
-          <div class="inner">
-            <button id="salmon-button">
-              <div class="art-tag" id="salmon-tag">
-                <p>'Salmon Egg' - Procreate</p>
-              </div>
-              <img src="salmon-egg.png" id="salmon-img" />
-            </button>
-          </div>
+          <button id="salmon-button">
+            <div class="art-tag" id="salmon-tag">
+              <p>'Salmon Egg' - Procreate</p>
+            </div>
+            <img src="salmon-egg.png" id="salmon-img" />
+          </button>
         </div>
         <!-- <img src="salmon-egg.png" alt="Digital Painting: Salmon Egg" /> -->
       </div>

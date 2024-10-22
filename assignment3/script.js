@@ -14,7 +14,7 @@ astroBottle.addEventListener("mouseenter", showAstroInfo);
 astroBottle.addEventListener("mouseleave", hideAstroInfo);
 
 function showAstroInfo() {
-  astroInfo.classList.add("show");
+  astroTag.classList.add("show");
   //   astroButton.classList.add("scale");
   astroButton.classList.add("show");
   astroTag.classList.add("show");
@@ -22,7 +22,7 @@ function showAstroInfo() {
 }
 
 function hideAstroInfo() {
-  astroInfo.classList.remove("show");
+  astroTag.classList.remove("show");
   astroButton.classList.remove("show");
   astroTag.classList.remove("show");
   //   astroButton.classList.add("scale-out");
@@ -118,3 +118,20 @@ function hideBullInfo() {
   bullTag.classList.remove("show");
   console.log("hide bull");
 }
+
+astroButton.addEventListener("click", showAstroPop);
+const astroPop = document.querySelector("#astro-pop-container");
+const astroPopBack = document.querySelector("#astro-pop-back");
+
+function showAstroPop() {
+  astroPop.classList.add("show");
+  console.log("astro click");
+}
+
+astroPopBack.addEventListener("click", hideAstroPop);
+
+function hideAstroPop() {
+  astroPop.classList.remove("show");
+}
+
+// This adds the ability to close the window by clicking on the background, which is an intuitive action standard in most websites.

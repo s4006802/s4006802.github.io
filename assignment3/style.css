@@ -2,7 +2,6 @@ nav {
   padding: 100px 0px 0px 100px;
 }
 
-
 .outer {
   padding: 10px;
   display: flex;
@@ -24,7 +23,6 @@ nav {
   position: relative;
   background-color: rgb(194, 176, 176);
 }
-
 
 .painting button {
   max-height: 300px;
@@ -62,7 +60,12 @@ nav {
   display: none;
 } */
 
-#salmon-tag.show, #astro-tag.show, #king-tag.show, #duck-tag.show, #sushi-tag.show, #bull-tag.show{
+#salmon-tag.show,
+#astro-tag.show,
+#king-tag.show,
+#duck-tag.show,
+#sushi-tag.show,
+#bull-tag.show {
   display: block;
 }
 
@@ -77,32 +80,58 @@ nav {
 }
 
 button:hover {
-  transform: scale(1.05)
+  transform: scale(1.05);
 }
 
-#salmon-egg, #king, #astrobottle, #bull, #tuna-sushi, #duck {
-  background-color: blueviolet; 
+#salmon-egg,
+#king,
+#astrobottle,
+#bull,
+#tuna-sushi,
+#duck {
+  background-color: blueviolet;
 }
 
 .window {
   display: flex;
-  margin:  5vw 5vw 5vw 5vw;
+  /* margin:  5vw 5vw 5vw 5vw;
   min-width: 700px;
   min-height: 500px;
-  max-height: 50vw;
+  max-height: 50vw; */
   background-color: aliceblue;
   color: black;
+  position: fixed;
+  z-index: 2;
+}
+
+#astro-pop-container {
+  background-color: rgba(0, 0, 0, 0.656);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   z-index: 1;
 }
 
+#astro-pop-container.show {
+  display: flex;
+}
+
+#astro-pop-back{
+  width: 100vw;
+  height: 100vh; 
+}
+
 .full-img {
-  max-width: 500px;
-  min-height: 500px;
+  max-width: 600px;
+  min-height: 600px;
 }
 
 .desc {
   padding: 1rem;
+  min-width: 200px;
 }
 
 /* #astro-button.scale {
