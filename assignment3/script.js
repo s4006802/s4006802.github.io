@@ -320,7 +320,7 @@ function playVideo() {
     bullPopTL.currentTime = 0;
     bullPopTL.classList.remove("show");
     bullPopTL.pause();
-  } 
+  }
 }
 
 // I chose not to disable the timelapse once the user clicks off the artwork, as the user may do this by accident and have to rewatch the timelapse from the start.
