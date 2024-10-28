@@ -21,11 +21,10 @@ function showAstroInfo() {
   astroTL.currentTime = 0;
   // This additional time revert along with the one in displayAstroTL() is necessary to prevent display glitches
   astroTag.classList.add("show");
-  //   astroButton.classList.add("scale");
   astroButton.classList.add("show");
   astroTag.classList.add("show");
   TLTimeout = setTimeout(displayAstroTL, 300);
-  // After 0.3 seconds of hover, the art piece changes into a timelapse of the art piece. A short amount of time is chosen so that the user is able to discover this functionalilty, and accounts for the added time from preview of the final piece at the start of the timelapse.
+  // After 0.3 seconds of hover, the art piece changes into a timelapse of the art piece. A short amount of time is chosen so that the user is able to discover this functionalilty, and accounts for the added time from preview of the final piece at the start of the timelapse. The timelapse does not begin immediately to allow the user to view the artwork briefly.
   console.log("show astro");
 }
 
@@ -39,7 +38,6 @@ function hideAstroInfo() {
   astroTag.classList.remove("show");
   astroButton.classList.remove("show");
   astroTag.classList.remove("show");
-  //   astroButton.classList.add("scale-out");
   console.log("hide astro");
   clearTimeout(TLTimeout);
   astroTL.classList.remove("show");
@@ -193,6 +191,8 @@ function displayBullTL() {
 
 // Pop Up Window Code
 
+// The navigation buttons within the pop up windows allow the user to explore each of the artworks without having to click off of the artwork, streamlining the experience.
+
 const nextButton = document.querySelectorAll(".next");
 console.log(nextButton);
 let popUpIndex = 0;
@@ -340,7 +340,7 @@ function showAstroPop() {
 
 astroButton.addEventListener("click", showAstroPop);
 astroPopBack.addEventListener("click", hideAstroPop);
-// This adds the ability to close the window by clicking on the background, which is an intuitive action standard in most websites.
+// This adds the ability to close the window by clicking on the background, which is an intuitive action standard in most websites. A close button is still present to prevent any confusion if the user does not know to click on the background to exit.
 astroCloseButton.addEventListener("click", hideAstroPop);
 
 function hideAstroPop() {
@@ -461,3 +461,5 @@ function hideBullPop() {
   bullPop.classList.remove("show");
   console.log("hide bull");
 }
+
+// An improvement for next time would be to figure out how to optimise the code as to not contintually repeating the same code for different artworks, and to more easily implement more artworks within a larger project.

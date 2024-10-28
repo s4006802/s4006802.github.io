@@ -1,31 +1,60 @@
-nav {
-  padding: 100px 0px 0px 100px;
+/* Researching existing portfolios from established artists within entertainment design, most of them share a minimalistic black and white style. This style prioritises the artwork by minimising distractions from the website design.  */
+
+header {
+  padding: 50px 0px 40px 0px;
+  user-select: none;
+  background-color: rgb(24, 24, 24);
 }
+
+hr {
+  width: 100%;
+}
+
+/* The website uses sans-serif font to further shift user attention away within the minimalistic style, as well as to evoke a modern style. */
 
 h1 {
   font-size: 2rem;
+  font-family: "Poppins", sans-serif;
 }
 
 h2 {
   font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+}
+
+#title {
+  padding-left: 100px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 5rem;
+}
+
+#subheading {
+  padding-left: 100px;
+  font-family: "Poppins", sans-serif;
 }
 
 .statement {
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding-top: 2rem;
   overflow: auto;
+  font-family: "Poppins", sans-serif;
 }
 
 .outer {
-  padding: 10px;
+  padding: 40px 10px 40px 10px;
   display: flex;
-  margin: 200px;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  background-color: aqua;
+  background-color: rgb(24, 24, 24);
 }
+/* The dark gray backdrop is the optimal shade for illustrations, as they allow the colours and bright values to pop and stand out more than they would on a white backdrop due to colour and value relativity. */
 
 .inner {
   user-select: none;
@@ -35,27 +64,29 @@ h2 {
   margin: 2px;
   padding: 5px;
   position: relative;
-  background-color: rgb(194, 176, 176);
+  /* background-color: rgb(194, 176, 176); */
   user-select: none;
 }
 
 .painting button {
-  max-height: 300px;
+  max-height: 400px;
   min-height: 100px;
   min-width: 100px;
   cursor: pointer;
   transition: transform 0.1s;
+  user-select: none;
 }
 
 .painting img {
-  max-height: 300px;
+  max-height: 400px;
   min-height: 100px;
   min-width: 100px;
   cursor: pointer;
+  user-select: none;
 }
 
 .timelapse {
-  max-height: 300px;
+  max-height: 400px;
   min-height: 100px;
   min-width: 100px;
   cursor: pointer;
@@ -63,6 +94,7 @@ h2 {
   top: 0px;
   display: none;
   z-index: 1;
+  user-select: none;
 }
 
 #salmon-timelapse.show,
@@ -74,27 +106,15 @@ h2 {
   display: block;
 }
 
-/* #duck {
-  min-height: 100px;
-  min-width: none;
-} */
-
 .art-tag {
-  background-color: brown;
+  background-color: rgba(83, 83, 83, 0.504);
   width: 100%;
-  align-items: center;
   display: none;
-  justify-content: center;
   font-size: 1rem;
   position: absolute;
   z-index: 2;
-  /* bottom: 35px; */
-  /* animation: btn-scale 0.1s forwards; */
 }
-
-/* .inner {
-  display: none;
-} */
+/* An issue I saw one professional portfolio example was that the hover information completely obstructed the artwork. I wanted to retain the ease and flow of hover information, but ensure to implement it in a very unobstrusive manner by reducing its size and adding transparency to the div.  */
 
 #salmon-tag.show,
 #astro-tag.show,
@@ -105,55 +125,17 @@ h2 {
   display: block;
 }
 
-/* #astrobottle-info.show {
-  display: block;
-} */
-
-#astro-button {
-  position: absolute;
-  top: 2%;
-  transition: transform 0.1s;
-}
-
 button:hover {
   transform: scale(1.05);
 }
 
-#salmon-egg,
-#king,
-#astrobottle,
-#bull,
-#tuna-sushi,
-#duck {
-  background-color: blueviolet;
-}
+/* The subtle animation when hovering over a button is necessary to signal interactivity to the user. */
 
 .window {
   display: flex;
-  /* margin:  5vw 5vw 5vw 5vw;
-  min-width: 700px;
-  min-height: 500px;
-  max-height: 50vw; */
-  background-color: aliceblue;
   flex-direction: row;
   color: black;
   position: fixed;
-
-  cursor: default;
-  z-index: 5;
-}
-
-.window2 {
-  display: flex;
-  /* margin:  5vw 5vw 5vw 5vw;
-  min-width: 700px;
-  min-height: 500px;
-  max-height: 50vw; */
-  background-color: aliceblue;
-  flex-direction: column;
-  color: black;
-  /* position: fixed; */
-  position: relative;
   cursor: default;
   z-index: 5;
 }
@@ -184,6 +166,7 @@ button:hover {
   z-index: 1;
   cursor: pointer;
 }
+/* The main webpage is darkened when viewing the pop up window to draw focus on the contents of the pop up window. */
 
 #astro-pop-container.show,
 #salmon-pop-container.show,
@@ -209,6 +192,7 @@ button:hover {
   /* Max height is defined with viewport heigh to ensure the art piece is displayed at an enlarged resolution whilst being responsive to the monitor*/
   min-height: 100px;
   object-fit: cover;
+  user-select: none;
 }
 
 .desc {
@@ -217,24 +201,39 @@ button:hover {
   padding: 2rem;
   min-width: 200px;
   max-width: 250px;
+  color: aliceblue;
+  background-color: rgb(24, 24, 24);
 }
 
 .close-btn {
-  background-color: green;
+  /* background-color: rgb(243, 0, 0); */
+  padding: 5px;
   position: absolute;
-  top: 0%;
+  bottom: 0%;
   right: 20px;
   cursor: pointer;
   z-index: 2;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  user-select: none;
 }
 
 .play-TL {
-  background-color: purple;
+  color: rgb(10, 10, 10);
+  background-color: rgb(83, 70, 255);
   margin-top: 1rem;
   position: relative;
   bottom: 0%;
   width: 100%;
   font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+  transition: 0.1s;
+}
+/* I added colour to the timelapse button so that it stands out compared to the other elements, ensuring that the user knows that there is a timelapse feature and to pique their curiosity. */
+
+.play-TL:hover {
+  background-color: aliceblue;
 }
 
 #salmon-pop-TL,
@@ -263,28 +262,31 @@ button:hover {
 .nav-button {
   align-content: center;
   justify-content: center;
-  background-color: yellow;
+  background-color: rgba(143, 143, 143, 0.634);
   width: 20px;
   transition: 0.2s;
   user-select: none;
 }
 
 .nav-button2 {
-  background-color: yellow;
+  background-color: rgba(143, 143, 143, 0.634);
   width: 20px;
   transition: 0.2s;
   height: 100%;
   padding-top: 100%;
   padding-bottom: 100%;
+  user-select: none;
 }
 
 .nav-button2:hover {
-  background-color: aqua;
+  background-color: rgb(215, 215, 215);
 }
 
 .nav-button:hover {
-  background-color: aqua;
+  background-color: rgb(215, 215, 215);
 }
+
+/* The bright hover colour catches user attention and signals to the users that the buttons are interactive */
 
 .arrow {
   display: flex;
@@ -292,33 +294,5 @@ button:hover {
   margin: auto;
   justify-content: center;
   text-align: center;
+  font-family: "Poppins", sans-serif;
 }
-
-/* #astro-button.scale {
-  animation: btn-scale 0.1s forwards;
-}
-
-#astro-button.scale-out {
-    animation: btn-scale-out 0.1s forwards;
-  } */
-/* A simple hover and transiton cannot be used on the button, as the information tag obstructs the button hover, causing the hover to be cancelled whenever the user hovers over the tag. To combat this, I used javascript to detect the hover over the whole div instead. */
-
-/* @keyframes btn-scale {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.05);
-  }
-}
-
-@keyframes btn-scale-out {
-  0% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-} */
-
-/* https://stackoverflow.com/questions/294250/how-do-i-retrieve-an-html-elements-actual-width-and-height */
