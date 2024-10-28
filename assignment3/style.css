@@ -56,6 +56,8 @@ p {
 }
 /* The dark gray backdrop is the optimal shade for illustrations, as they allow the colours and bright values to pop and stand out more than they would on a white backdrop due to colour and value relativity. */
 
+/* The use of flex allows the artworks to fill the space of the website more responsively  than grid, which would be important as I want the artworks should fill up as much space as possible since viewing them is the main focal point of the website.  */
+
 .inner {
   user-select: none;
 }
